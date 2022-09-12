@@ -1,19 +1,23 @@
 const container = document.querySelector('#container');
 
-// creates grid slider and shows grid size
 let slider = document.getElementById("gridRange");
 let sliderValue = Number(slider.value);
+
+//shows grid size text
 let gridRangeDisplay = document.getElementById("gridRangeDisplay");
     gridRangeDisplay.innerText = `${slider.value} x ${slider.value}`;
+
+//updates grid size text and slider value based on user slider input
     slider.oninput = function() {
+        sliderValue = this.value;
         gridRangeDisplay.innerHTML= `${slider.value} x ${slider.value}`;
+        makeGrid(this.value, this.value);
     };
 
-//    slider.addEventListener('mouseup', makeGrid);
 
     //creates cells based on grid sliderValue
-function makeCells(sliderValue) {
-    for (i = 0; i < sliderValue; i++) {
+function makeCells(num) {
+    for (i = 0; i < num; i++) {
         let div = document.createElement('div');
         div.classList.add('box');
         div.addEventListener('mouseover', function(event) { //changes cell color on mouseover
@@ -24,11 +28,11 @@ function makeCells(sliderValue) {
 };
 
 //creates grid matrix from grid sliderValue by accessing CSS and calling makeCells
-function makeGrid(sliderValue, sliderValue) {
-    container.style.setProperty('--numCols', sliderValue);
-    container.style.setProperty('--numRows', sliderValue);
-    for (let i = 0; i < sliderValue; i++) {
-        makeCells(sliderValue);
+function makeGrid(numCols, numRows) {
+    container.style.setProperty('--numCols', numCols);
+    container.style.setProperty('--numRows', numRows);
+    for (let i = 0; i < numCols; i++) {
+        makeCells(numCols);
    }
 };
 

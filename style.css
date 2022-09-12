@@ -6,21 +6,12 @@ body {
     align-items: center;
 }
 
-.slider {
-
-
-}
-
 p {
     margin-top: 0px;
 }
 
-#boxContainer {
-    display: flex;
-}
 #container {
     display: grid; 
-    justify-content: center;
     margin:auto;
     grid-template-columns: repeat(var(--numCols), 1fr);
     grid-template-rows: repeat(var(--numRows), 1fr);
@@ -29,11 +20,6 @@ p {
     background:rgb(255, 254, 220);
     border: 5px solid black;
     border-radius: 4px;
-}
-
-.box {
-    display: flex;
-    border: 1px solid #e5e5e5;
 }
 
 :root {
