@@ -1,29 +1,42 @@
 body {
     background: rgb(255, 202, 202);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.header {
-    text-align: center;
+.slider {
+
 
 }
-#container {
+
+p {
+    margin-top: 0px;
+}
+
+#boxContainer {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 450px;
-    height: 450px;
+}
+#container {
+    display: grid; 
+    justify-content: center;
+    margin:auto;
+    grid-template-columns: repeat(var(--numCols), 1fr);
+    grid-template-rows: repeat(var(--numRows), 1fr);
+    width: 650px;
+    height: 650px;
     background:rgb(255, 254, 220);
     border: 5px solid black;
     border-radius: 4px;
 }
 
 .box {
-    flex: 1 1 auto;
-    height: 25px;
-    width: 25px;
+    display: flex;
     border: 1px solid #e5e5e5;
 }
 
+:root {
+    --numCols: 1;
+    --numRows: 1;
+}
