@@ -1,5 +1,8 @@
 const container = document.querySelector('#container');
 
+const resetButton = document.querySelector('button');
+    resetButton.addEventListener('click', resetGrid);
+
 let slider = document.getElementById("gridRange");
 let sliderValue = Number(slider.value);
 
@@ -35,5 +38,12 @@ function makeGrid(numCols, numRows) {
         makeCells(numCols);
    }
 };
+
+function resetGrid() {
+    while (container.firstChild) {
+      container.removeChild(container.lastChild);
+    }
+    makeGrid(sliderValue, sliderValue);
+  };
 
 makeGrid(sliderValue, sliderValue);

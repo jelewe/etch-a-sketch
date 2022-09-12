@@ -1,4 +1,5 @@
 body {
+    font-family: 'Rock Salt', cursive;
     background: rgb(255, 202, 202);
     display: flex;
     flex-direction: column;
