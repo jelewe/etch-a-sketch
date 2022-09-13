@@ -38,6 +38,42 @@ function makeGrid(numCols, numRows) {
    }
 };
 
+//adds rainbow button functionality
+const rgb = document.querySelector('.rgbButton');
+rgb.addEventListener('click', function() {
+    let cell = container.children;
+    for (let i = 0; i < sliderValue * sliderValue; i++) {
+        cell [i].addEventListener('mouseover', function(event) {
+            event.currentTarget.style.backgroundColor = getRainbow();
+        })
+     }
+});
+
+    //returns a random rainbow color
+    function getRainbow() {
+        let rgbArray = [
+            '#FF6663',
+            '#FEB144',
+            '#FDFD97',
+            '#9EE09E',
+            '#9EC1CF',
+            '#CC99C9',
+        ];
+        let color =  rgbArray[Math.floor(Math.random()*rgbArray.length)];
+        return color;
+    };
+
+    //adds black pen button functionality
+const black = document.querySelector('.blackButton');
+black.addEventListener('click', function() {
+    let cell = container.children;
+    for (let i = 0; i < sliderValue * sliderValue; i++) {
+        cell [i].addEventListener('mouseover', function(event) {
+            event.currentTarget.style.backgroundColor = 'black';
+        })
+     }
+});
+
 function resetGrid() {
     while (container.firstChild) {
       container.removeChild(container.lastChild);
