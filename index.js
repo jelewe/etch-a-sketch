@@ -1,6 +1,6 @@
 const container = document.querySelector('#container');
 
-const resetButton = document.querySelector('button');
+const resetButton = document.querySelector('.resetButton');
     resetButton.addEventListener('click', resetGrid);
 
 let slider = document.getElementById("gridRange");
@@ -17,8 +17,7 @@ let gridRangeDisplay = document.getElementById("gridRangeDisplay");
         makeGrid(this.value, this.value);
     };
 
-
-    //creates cells based on grid sliderValue
+ //creates cells based on grid sliderValue
 function makeCells(num) {
     for (i = 0; i < num; i++) {
         let div = document.createElement('div');

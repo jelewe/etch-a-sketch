@@ -12,17 +12,22 @@
     <script src = "index.js" defer></script>
 </head>
 <body>
-    <div class = "header">
-        <h1> Sketch & Etch </h1>
-    </div>
+<div class="left">
     <div class="sliderDiv">
         <input type="range" min="2" max="100" value="25" class="slider" id="gridRange"> 
         <p>Grid size: <span id = "gridRangeDisplay"></span></p>
       </div>
-      <div class="resetButton"><button>Reset</button></div>
+      <div class="resetButton"><button>Erase</button>
+      </div>
+    </div>
+    <div class="right">
+    <div class = "header">
+        <h1> Sketch & Etch </h1>
+    </div>
     <div id = "containerBox">
         <div id = "container">
         </div>
     </div>
+</div>
 </body>
 </html>
