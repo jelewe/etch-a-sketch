@@ -27,6 +27,7 @@ body {
 button {
     font-family: 'Rock Salt', cursive;
     background:rgb(248, 230, 230);
+    border-radius: 5px;
 }
 
 button:hover {
